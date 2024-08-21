@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Etkinlik Güncelleme"
+             x:Class="QRiyerXamarin.Views.EtkUpd">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Etkinlik ID" TextColor="Black"/>
+            <Picker x:Name="etkPicker" BackgroundColor="Gray" Title="Etkinlik Seçin" SelectedIndexChanged="etkPicker_SelectedIndexChanged" />
+            <Label Text="Etkinlik Adı" TextColor="Black"/>
+            <Entry x:Name="etkinlikAdtext" BackgroundColor="Gray" Placeholder="" />
+            <Label Text="Tür" TextColor="Black"/>
+            <Entry x:Name="türtext" BackgroundColor="Gray" Placeholder="" />
+            <Label Text="Tarih" TextColor="Black"/>
+            <DatePicker x:Name="TarihAl" BackgroundColor="Gray" Format="dd-MM-yyyy" />
+            <Label Text="Saat" TextColor="Black"/>
+            <TimePicker x:Name="SaatAl" BackgroundColor="Gray" Format="HH:mm" />
+            <Button Text="Güncelle" Clicked="UpdateButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

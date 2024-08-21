@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:QRiyerXamarin.Views"
+       Title="QRiyerXamarin"
+       x:Class="QRiyerXamarin.AppShell">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>
+    <TabBar>
+        <ShellContent Route="SignupPage" ContentTemplate="{DataTemplate local:SignupPage}" />
+    </TabBar>
+    
+    <FlyoutItem Title="Giriş" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="QR Tarayıcı" Icon="icon_feed.png">
+        <ShellContent Route="BarcodeScanner"  ContentTemplate="{DataTemplate local:BarcodeScanner}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Sertifikalarım" Icon="icon_feed.png">
+        <ShellContent Route="DataRead" ContentTemplate="{DataTemplate local:DataRead}" />
+    </FlyoutItem>
+    <FlyoutItem Title="QR Oluşturucu"  IsVisible="{Binding BarkodOluşturucuVisible}" Icon="icon_feed.png">
+        <ShellContent Route="BarcodeGen" ContentTemplate="{DataTemplate local:BarcodeGen}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Etkinliklerim"  IsVisible="{Binding BarkodOluşturucuVisible}" Icon="icon_feed.png">
+        <ShellContent Route="DataOrder" ContentTemplate="{DataTemplate local:DataOrder}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Detaylar" IsVisible="{Binding BarkodOluşturucuVisible}" Icon="icon_feed.png">
+        <ShellContent Route="DetPage" ContentTemplate="{DataTemplate local:DetPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Yeni Sertifika Oluştur" Icon="icon_feed.png">
+        <ShellContent Route="DbCon" IsVisible="{Binding VeriKaydetmeVisible}" ContentTemplate="{DataTemplate local:DbCon}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Sertifika Full Güncelleme" Icon="icon_feed.png">
+        <ShellContent Route="EtkUpd" IsVisible="False" ContentTemplate="{DataTemplate local:EtkUpd}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Sertifika Güncelleme" FlyoutItem.IsVisible="False" Icon="icon_feed.png">
+        <ShellContent Route="EtkinUpd" ContentTemplate="{DataTemplate local:EtkinUpd}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Hesabım"  Icon="icon_feed.png">
+        <ShellContent Route="UserProfile" ContentTemplate="{DataTemplate local:UserProfile}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Hesabım" FlyoutItem.IsVisible="False" Icon="icon_feed.png">
+        <ShellContent Route="UserUpd" ContentTemplate="{DataTemplate local:UserUpd}" />
+    </FlyoutItem>
+
+    <MenuItem Text="Çıkış" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    </MenuItem>
+</Shell>

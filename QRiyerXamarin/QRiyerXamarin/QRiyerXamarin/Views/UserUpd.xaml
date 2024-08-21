@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Profil Güncelleme"
+             x:Class="QRiyerXamarin.Views.UserUpd">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Telefon Numarası" TextColor="Black" />
+            <Label Text="" x:Name="Eskino" TextColor="Black"/>
+            <Entry x:Name="telnoText" Placeholder="" BackgroundColor="Gray" Keyboard="Telephone" />
+            <Label Text="Ad" TextColor="Black"/>
+            <Entry x:Name="adText" Placeholder="" BackgroundColor="Gray" />
+            <Label Text="Soyad" TextColor="Black"/>
+            <Entry x:Name="soyadText" Placeholder="" BackgroundColor="Gray" />
+            <Label Text="T.C. No" TextColor="Black"/>
+            <Label x:Name="tcnoText" BackgroundColor="Gray"/>
+            <Label Text="E-mail" TextColor="Black"/>
+            <Entry x:Name="mailText" Placeholder="" BackgroundColor="Gray" />
+            <Button Text="Güncelle" Clicked="UpdateButton_Clicked" />
+            <Label x:Name="dbupdate" TextColor="Red" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

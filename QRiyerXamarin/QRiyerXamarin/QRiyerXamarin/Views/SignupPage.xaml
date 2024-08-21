@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRiyerXamarin.Views.SignupPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Telefon Numarası" TextColor="Black"/>
+            <Entry x:Name="telnoText" Placeholder="" BackgroundColor="Gray" Keyboard="Numeric" />
+            <Label Text="Şifre" TextColor="Black"/>
+            <Entry x:Name="sifreText" Placeholder="" BackgroundColor="Gray" IsPassword="True" />
+            <Label Text="Şifre Tekrar" TextColor="Black"/>
+            <Entry x:Name="sifretkrText" Placeholder="" BackgroundColor="Gray" IsPassword="True" />
+            <Label Text="Ad" TextColor="Black"/>
+            <Entry x:Name="adText" Placeholder="" BackgroundColor="Gray"/>
+            <Label Text="Soyad" TextColor="Black"/>
+            <Entry x:Name="soyadText" Placeholder="" BackgroundColor="Gray"/>
+            <Label Text="Tc No"  TextColor="Black"/>
+            <Entry x:Name="tcnoText" Placeholder="" BackgroundColor="Gray" Keyboard="Numeric" />
+            <Label Text="Mail" TextColor="Black"/>
+            <Entry x:Name="mailText" Placeholder="" BackgroundColor="Gray" />
+            <Label Text="Etkinlik Oluşturucusu Musunuz?" TextColor="Black"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
+                <Label Text="Hayır" TextColor="Black" VerticalOptions="Center" />
+                <Switch IsToggled="false" x:Name="adminkontrol" VerticalOptions="Center" Toggled="OnSwitchToggled" />
+                <Label Text="Evet" TextColor="Black" VerticalOptions="Center" />
+            </StackLayout>
+            <Button x:Name="dbadd" Clicked="DbButton_Clicked" Text="Kayıt Ol" />
+            <Button Text="Geri Dön" x:Name="geri" Clicked="geri_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

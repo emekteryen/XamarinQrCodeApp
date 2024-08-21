@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Yeni Sertifika Kayıt"
+             x:Class="QRiyerXamarin.Views.DbCon">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Etkinlik Adı" TextColor="Black"/>
+            <Entry x:Name="etkinlikAdtext" BackgroundColor="Gray" Placeholder="" />
+            <Label Text="Etkinlik Türü" TextColor="Black"/>
+            <Entry x:Name="türtext" BackgroundColor="Gray" Placeholder="" />
+            <Label Text="Tarih Seçiniz" TextColor="Black"/>
+            <DatePicker x:Name="TarihAl" BackgroundColor="Gray" Format="dd-MM-yyyy" />
+            <Label Text="Saat Seçiniz" TextColor="Black"/>
+            <TimePicker x:Name="SaatAl" BackgroundColor="Gray" Format="HH:mm"/>
+            <Button x:Name="dbadd" Clicked="DbButton_Clicked" Text="Veriyi kaydet" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

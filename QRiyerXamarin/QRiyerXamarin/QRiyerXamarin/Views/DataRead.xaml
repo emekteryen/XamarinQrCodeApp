@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Sertifikalarım"
+             x:Class="QRiyerXamarin.Views.DataRead">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="" x:Name="infotxt" TextColor="Black"/>
+            <StackLayout>
+                <CollectionView x:Name="DbData">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="10"
+                           Margin="10"
+                           Padding="10">
+                                <StackLayout Orientation="Horizontal"  BackgroundColor="{Binding RandomColor}">
+                                    <StackLayout>
+                                        <Label Text="Etkinlik Adı" />
+                                        <Label Text="{Binding etkinlikad}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Etkinlik Türü" />
+                                        <Label Text="{Binding tür}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Etkinlik Tarihi" />
+                                        <Label Text="{Binding tarih}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

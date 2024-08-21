@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRiyerXamarin.Views.DetPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker Title="" x:Name="picker" BackgroundColor="Gray" SelectedIndexChanged="Picker_SelectedIndexChanged"/>
+            <Label x:Name="infotxt" Text="" TextColor="Black"/>
+            <Label Text="" x:Name="kayit"/>
+            <StackLayout>
+                <CollectionView x:Name="DbData">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="10"
+                           Margin="10"
+                           Padding="10">
+                                <StackLayout Orientation="Horizontal"  BackgroundColor="{Binding RandomColor}">
+                                    <StackLayout>
+                                        <Label Text="Tel No.:" />
+                                        <Label Text="{Binding telefonno}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Aaı" />
+                                        <Label Text="{Binding ad}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Soyadı" />
+                                        <Label Text="{Binding soyad}" />
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Mail Adresi" />
+                                        <Label Text="{Binding mail}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

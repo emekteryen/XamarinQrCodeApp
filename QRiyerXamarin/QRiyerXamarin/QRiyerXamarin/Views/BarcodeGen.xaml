@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="QR Oluşturucu"
+             x:Class="QRiyerXamarin.Views.BarcodeGen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="itemPicker"
+                    Title="Seçim Yap"
+                    BackgroundColor="Gray"
+                    ItemsSource="{Binding PickerItems}"
+                    SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            </Picker>
+            <Label x:Name="test" Text="" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

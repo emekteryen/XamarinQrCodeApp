@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRiyerXamarin.Views.UserProfile">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ad" TextColor="Black"/>
+            <Label x:Name="adtext" TextColor="Black" Text="" />
+            <Label Text="Soyad" TextColor="Black"/>
+            <Label x:Name="soyadtext" Text="" TextColor="Black"/>
+            <Label Text="Telefon" TextColor="Black"/>
+            <Label x:Name="teltext" Text="" TextColor="Black"/>
+            <Label Text="Mail" TextColor="Black"/>
+            <Label x:Name="mailtext" Text="" TextColor="Black"/>
+            <Label Text="Tc" TextColor="Black"/>
+            <Label x:Name="tctext" Text="" TextColor="Black"/>
+            <Button Text="Profili Güncelle" Clicked="UsrUpd_Clicked" />
+            <Button Text="Şifre Yenile" Clicked="sifreyenile_Clicked" />
+            <Label x:Name="eskisifre" Text="Eski Şifre" TextColor="Black"/>
+            <Entry x:Name="eskisifretext" Text="" BackgroundColor="Gray"/>
+            <Label x:Name="yenisifre" Text="Yeni Şifre" TextColor="Black"/>
+            <Entry x:Name="yenisifretext" Text="" BackgroundColor="Gray"/>
+            <Label x:Name="yenitekrar" Text="Yeni Şifre Tekrar" TextColor="Black"/>
+            <Entry x:Name="yenitekrartext" Text="" BackgroundColor="Gray"/>
+            <Button x:Name="yenile" Text="Yenile" Clicked="sifre_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
