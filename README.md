@@ -1,0 +1,1 @@
+Xamarin ile ilk defa geliştirdiğim uygulamam. Qr kod okutularak etkinlik katılımı bilgisi oluşturuyor. Kod oluşturabilen yönetici hesabı ve eğitimlere katılan kişier için normal hesap sistemleri bulunuyor. Yöneticilerin oluşturduğu kodları kamera yardımı ile okutarak katılım sağlanabiliyor. Arayüz ilk projem ve denemem olduğu için pek kaliteli değil.
